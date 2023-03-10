@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ecommerce Practice</title>
+    <link rel="shortcut icon" href="./images/ecommerce-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form onsubmit="event.preventDefault()">
+        <h3>Signup Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button>Signup</button>
+        <span style="font-size: 12px; margin-top: 20px !important;">Already Account? <a href="./userlogin.html">Login instead</a></span>
+
+    </form>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBvRnhqF4k-wfVnK0nBajhqhG0_tm2QLK8",
+            authDomain: "ecomprctc.firebaseapp.com",
+            projectId: "ecomprctc",
+            storageBucket: "ecomprctc.appspot.com",
+            messagingSenderId: "1030641793731",
+            appId: "1:1030641793731:web:2162483f3a0ac512934076"
+        };
+
+        firebase.initializeApp(firebaseConfig)
+    </script>
+    <!-- Custom JS -->
+    <script src="./js/usersignup.js"></script>
+</body>
+
+</html>

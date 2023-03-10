@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Quicksand',sans-serif;
+    box-sizing: border-box !important;
+}
+.shop-hero{
+    background: url('../images/shopbg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+.active{
+    font-weight: 600;
+    color: #254057;
+}
+.fa-solid{
+    color:#F24E29;
+}

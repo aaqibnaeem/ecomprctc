@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/ecommerce-logo.png" type="image/x-icon">
+    <title>Ecommerce Practice</title>
+    <!--BootStrap 5.3 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img width="100px" src="./images/ecommerce-logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-1">
+                        <a href="#" class="nav-link active">Admin Panel</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="./orders.html" class="nav-link">All orders</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <button class="btn btn-light shadow-sm">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Body -->
+    <div class="container py-3 text-center">
+        <h1>Admin Panel</h1>
+    </div>
+    <div class="container d-flex flex-column">
+        <div class="accordion my-2" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Add New Arrival
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h6>Add New Arrival Product Here</h6>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <input type="text" id="newname" class="form-control my-1 shadow-none"
+                                    placeholder="Name">
+                                <input type="text" id="newcat" class="form-control my-1 shadow-none"
+                                    placeholder="Category">
+                                <input type="number" id="newqty" class="form-control my-1 shadow-none"
+                                    placeholder="Quantity">
+                                <input type="number" id="newprice" class="form-control my-1 shadow-none"
+                                    placeholder="Price">
+                                <input type="file" id="newimg" class="form-control my-1 shadow-none" accept="image/*">
+                                <button class="btn btn-success w-100">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Add Product
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h6>Add Product Here</h6>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <input type="text" id="name" class="form-control my-1 shadow-none" placeholder="Name">
+                                <input type="text" id="cat" class="form-control my-1 shadow-none"
+                                    placeholder="Category">
+                                <input type="number" id="qty" class="form-control my-1 shadow-none"
+                                    placeholder="Quantity">
+                                <input type="number" id="price" class="form-control my-1 shadow-none"
+                                    placeholder="Price">
+                                <input type="file" id="img" class="form-control my-1 shadow-none" accept="image/*">
+                                <button class="btn btn-success w-100">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="overflow-x: auto;">
+        <table class="table table-hover border" style="min-width: 1000px;font-size: 14px;">
+            <tr class="text-center fw-bold">
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <!--BootStrap 5.3 JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBvRnhqF4k-wfVnK0nBajhqhG0_tm2QLK8",
+            authDomain: "ecomprctc.firebaseapp.com",
+            projectId: "ecomprctc",
+            storageBucket: "ecomprctc.appspot.com",
+            messagingSenderId: "1030641793731",
+            appId: "1:1030641793731:web:2162483f3a0ac512934076"
+        };
+
+        firebase.initializeApp(firebaseConfig)
+    </script>
+    <!-- Custom JS -->
+    <script src="./js/admin.js"></script>
+
+</body>
+
+</html>
